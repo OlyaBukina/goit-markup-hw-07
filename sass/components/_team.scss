@@ -1,0 +1,51 @@
+.team {
+  background-color: $secondary-background-color;
+}
+.team-list {
+  display: flex;
+  column-gap: 30px;
+}
+.team-list .item {
+  flex-basis: calc((100% - 90px) / 4);
+  box-shadow: $main-box-shadow;
+  border-radius: 0px 0px 4px 4px;
+}
+.team-list .info {
+  padding: 30px 32px;
+
+  background-color: $primary-background-color;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+}
+.team h3 {
+  margin-bottom: 10px;
+  color: title-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.team p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.social-list {
+  @extend %centered-flex;
+  column-gap: 10px;
+}
+.social-list .link {
+  @extend %centered-flex;
+  width: 44px;
+  height: 44px;
+
+  fill: $social-links-color;
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function,
+    fill 250ms $timing-function;
+}
+.social-list .link:hover,
+.social-list .link:focus {
+  background-color: $accent-color;
+  fill: $white-text;
+}

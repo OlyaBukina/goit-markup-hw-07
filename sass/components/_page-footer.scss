@@ -1,0 +1,86 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-background-color;
+}
+.page-footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: $white-text;
+}
+.contacts li:not(:last-child) {
+  margin-bottom: 9px;
+}
+.contacts li {
+  height: 21px;
+}
+.contacts a {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+
+  line-height: 24px;
+  transition: color 250ms $timing-function;
+}
+.contacts .location {
+  color: $white-text;
+}
+.contacts a:hover,
+.contacts a:focus {
+  color: $accent-color;
+}
+.footer-content {
+  display: flex;
+}
+.address-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+}
+.footer-title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+  color: $white-text;
+}
+.footer-social-list .link {
+  fill: $white-text;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-links {
+  margin-right: 93px;
+  margin-top: 12px;
+}
+.subscription-section {
+  margin-top: 12px;
+}
+.footer-form {
+  width: 570px;
+  gap: 12px;
+  display: flex;
+}
+.email-input {
+  flex: 1 1 auto;
+  padding: 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: $white-text;
+}
+.email-input::placeholder {
+  font-size: 16px;
+}
+.footer-button {
+  width: 200px;
+  margin: 0;
+}
+.footer-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/send-icon.svg);
+  background-size: contain;
+}
