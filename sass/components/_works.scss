@@ -1,13 +1,24 @@
-.working-list {
+.works {
+  @extend %section;
+}
+
+.works__container {
+  @extend %container;
+}
+
+.works__list {
+  @extend %list;
   display: flex;
   column-gap: 30px;
 }
-.working-list .item {
+.works__item {
   position: relative;
   flex-grow: 1;
 }
-.working-list .img-content {
-  @extend %centered-flex;
+.works__label-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -16,7 +27,7 @@
 
   background-color: rgba(47, 48, 58, 0.8);
 }
-.img-content p {
+.works__label {
   color: $white-text;
   font-weight: 700;
   text-transform: uppercase;

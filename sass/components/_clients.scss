@@ -1,8 +1,17 @@
-.clients-list {
+.clients {
+  @extend %section;
+}
+
+.clients__container {
+  @extend %container;
+}
+
+.clients__list {
+  @extend %list;
   display: flex;
   column-gap: 30px;
 }
-.clients-list .link {
+.clients__link {
   width: 170px;
   height: 92px;
   display: flex;
@@ -13,9 +22,10 @@
   border-radius: 4px;
   fill: $social-links-color;
   transition: border-color 250ms $timing-function, fill 250ms $timing-function;
+  &:hover,
+    &:focus {
+      border-color: $accent-color;
+      fill: $accent-color;
+  
 }
-.clients-list .link:hover,
-.clients-list .link:focus {
-  border-color: $accent-color;
-  fill: $accent-color;
 }

@@ -1,23 +1,24 @@
-.projects-list {
+.projects {
+  @extend %list;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.projects-list .item {
+.projects__item {
   flex-grow: 1;
   transition: box-shadow 250ms $timing-function;
+  &:hover,
+  &:focus {
+    box-shadow: $projects-card-shadow;
+  }
 }
-.projects-item:hover,
-.projects-item:focus {
-  box-shadow: $projects-card-shadow;
-}
-.projects-list .info {
+.projects-info {
   padding: 20px 24px;
   @include border($portfolio-item-border-color);
   border-top: none;
 }
-.projects-list h2 {
+.projects-info__label {
   margin-bottom: 4px;
   color: $title-color;
   font-weight: 700;
@@ -25,16 +26,16 @@
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.projects-list p {
+.projects-info__sub-label {
   color: $text-color;
   font-size: 16px;
   line-height: 2;
 }
-.projects-thumb {
+.projects__thumb {
   position: relative;
   overflow: hidden;
 }
-.projects-overlay {
+.projects__overlay {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -44,12 +45,12 @@
   background-color: $overlay-color;
   transform: translateY(100%);
   transition: transform 250ms $timing-function;
+  .projects__item:hover & {
+    transform: translateY(0);
+  }
 }
-.projects-thumb .text {
+.projects__text {
   color: $white-text;
   font-size: 18px;
   line-height: 1.55;
-}
-.projects-item:hover .projects-overlay {
-  transform: translateY(0);
 }
