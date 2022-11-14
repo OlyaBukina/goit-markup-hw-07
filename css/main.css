@@ -773,6 +773,15 @@ img {
   flex-direction: column;
 }
 
+.form__inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
 .form__title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -783,10 +792,10 @@ img {
 }
 
 .form__field {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -798,7 +807,6 @@ img {
 }
 
 .form__input-wrap {
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -817,9 +825,8 @@ img {
 
 .form__icon {
   position: absolute;
-  top: 50%;
+  bottom: 11px;
   left: 12px;
-  transform: translateY(-50%);
 }
 .form__field:focus-within .form__icon {
   fill: #2196f3;
@@ -860,7 +867,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto 30px;
+  margin: 20px auto 30px;
 }
 
 .form-policy__input {
