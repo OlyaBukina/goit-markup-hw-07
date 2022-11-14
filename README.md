@@ -1,2 +1,2 @@
 # Full Stack Developer course
-## Homework Week 6
+## Homework Week 7
